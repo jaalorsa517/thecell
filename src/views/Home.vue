@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section class="home">
+    <router-view class="home__nav" name="nav"></router-view>
+    <router-view class="home__content" name="content"></router-view>
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  name: "Home",
+};
+</script>
+
+<style lang="scss">
+.home {
+  @include Flex(column);
+  &__nav {
+    flex-grow: 0;
+  }
+  &__content {
+    flex-grow: 3;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 }
-</script>
+</style>
