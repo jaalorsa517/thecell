@@ -1,8 +1,9 @@
 <template>
   <section class="navigation">
+    <button @click="onClick">Click</button>
     <ul class="navigation__items">
       <li class="navigation__item" v-for="(content, index) in contents" :key="index">
-        <cItem :item="content" :id="index + 1" />
+        <cItem :item="content" :id="index + 1" :showBar="a[index]" />
       </li>
     </ul>
   </section>
@@ -15,6 +16,19 @@ export default {
   name: "cNavigation",
   components: {
     cItem,
+  },
+  data() {
+    return {
+      n: 0,
+      a: [false, false, false, false],
+    };
+  },
+  methods: {
+    onClick() {
+      this.a.splice(this.n, 1, true);
+      console.log(this.a);
+      this.n++;
+    },
   },
 };
 </script>
@@ -30,14 +44,12 @@ export default {
   }
   &__item {
     @include Flex(row, center);
-    width: $spacing * 3.2;
-    height: $spacing * 3.2;
+    width: $len;
+    height: $len;
     color: white;
     background-color: $primary-color;
     border-radius: 100%;
     cursor: pointer;
-    &:hover {
-    }
   }
   @media screen and (min-width: 768px) {
     &__items {
