@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import nav from "@/components/cNavigation.vue";
 
 Vue.use(VueRouter);
 
@@ -13,8 +14,8 @@ const routes = [
       {
         path: "/",
         components: {
-          nav: () => import("@/components/cNavigation.vue"),
-          content: () => import("@/components/cContent"),
+          nav,
+          content: () => import("@/components/cContent.vue"),
         },
       },
     ],
@@ -30,6 +31,14 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: "smooth",
+      };
+    }
+  },
 });
 
 export default router;

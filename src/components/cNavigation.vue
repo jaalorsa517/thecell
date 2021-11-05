@@ -1,9 +1,8 @@
 <template>
   <section class="navigation">
-    <button @click="onClick">Click</button>
     <ul class="navigation__items">
       <li class="navigation__item" v-for="(content, index) in contents" :key="index">
-        <cItem :item="content" :id="index + 1" :showBar="a[index]" />
+        <cItem :item="content" :id="index + 1" :showActive="state[index]" />
       </li>
     </ul>
   </section>
@@ -20,15 +19,21 @@ export default {
   data() {
     return {
       n: 0,
-      a: [false, false, false, false],
+      state: [],
     };
   },
   methods: {
     onClick() {
-      this.a.splice(this.n, 1, true);
-      console.log(this.a);
-      this.n++;
+      if (this.n < this.contents.length - 1) {
+        this.state[this.n].bar = true;
+        this.n++;
+        this.state[this.n].active = true;
+      }
     },
+  },
+  created() {
+    this.state = this.contents.map(() => ({ active: false, bar: false }));
+    this.state[0].active = true;
   },
 };
 </script>
@@ -41,15 +46,6 @@ export default {
     @include Flex(row, center);
     gap: $spacing * 3;
     list-style: none;
-  }
-  &__item {
-    @include Flex(row, center);
-    width: $len;
-    height: $len;
-    color: white;
-    background-color: $primary-color;
-    border-radius: 100%;
-    cursor: pointer;
   }
   @media screen and (min-width: 768px) {
     &__items {

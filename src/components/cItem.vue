@@ -1,8 +1,8 @@
 <template>
-  <div class="item">
+  <div :class="['item', showActive.active ? 'active' : '']">
     <div class="item__content">
       {{ id }}
-      <div class="item__bar" v-if="showBar"></div>
+      <div class="item__bar" v-if="showActive.bar"></div>
     </div>
   </div>
 </template>
@@ -19,23 +19,34 @@ export default {
       type: Number,
       required: true,
     },
-    showBar: Boolean,
+    showActive: Object,
   },
 };
 </script>
 
 <style lang="scss">
 .item {
+  @include Flex(row, center);
+  width: $len;
+  height: $len;
+  color: white;
+  background-color: $primary-color;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background-color 1s 500ms;
+  &.active {
+    background-color: $secondary_color;
+  }
   &__content {
     position: relative;
   }
   &__bar {
     height: $spacing;
-    width: $len;
-    background-color: $fourth_color;
+    width: $len + 5;
+    background-color: $secondary_color;
     position: absolute;
     top: $len / 5;
-    left: $len / 1.7;
+    left: $len / 1.8;
     animation: slideInLeftX 1s;
   }
   @media screen and (min-width: 768px) {
