@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss">
 .card {
+  width: auto;
   max-width: 250px;
   max-height: 350px;
   padding: $spacing * 1.5;

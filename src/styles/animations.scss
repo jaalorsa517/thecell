@@ -13,3 +13,22 @@
     transform: scale(1);
   }
 }
+
+@keyframes slideInLeftX {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $len;
+  }
+}
+@keyframes slideInLeftY {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: $len;
+  }
+}

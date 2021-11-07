@@ -1,10 +1,10 @@
 <template>
-  <div :class="['item', showActive.active ? 'active' : '']">
+  <router-link :class="['item', showActive.active ? 'active' : '']" :to="item.to">
     <div class="item__content">
       {{ id }}
       <div class="item__bar" v-if="showActive.bar"></div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -34,6 +34,7 @@ export default {
   border-radius: 100%;
   cursor: pointer;
   transition: background-color 1s 500ms;
+  text-decoration: none;
   &.active {
     background-color: $secondary_color;
   }
@@ -54,28 +55,10 @@ export default {
     &__bar {
       width: $spacing;
       height: $len;
-      top: $len / 1.25;
-      left: -$len/15;
+      top: 130%;
+      left: 0;
       animation-name: slideInLeftY;
     }
-  }
-}
-@keyframes slideInLeftX {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: $len;
-  }
-}
-@keyframes slideInLeftY {
-  from {
-    height: 0;
-  }
-
-  to {
-    height: $len;
   }
 }
 </style>

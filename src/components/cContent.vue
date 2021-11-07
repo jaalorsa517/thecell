@@ -11,13 +11,13 @@
       </p>
       <p>Existen dos tipos de células que hacen la diferencia en los seres vivos, las cuales son:</p>
     </section>
-    <section class="content__section">
+    <section class="content__section" id="eucariota">
       <p>
         <b>1. Eucariotas:</b>
         La célula está compuesta por diferentes estructuras tanto morfológicas como funcional, las cuales son:
       </p>
       <cell class="content__cell" />
-      <section class="content__section">
+      <section class="content__section" id="membrana">
         <p>
           <b>1. Membrana Plasmática:</b>
           Está formada por una capa bilipidica y proteinas, su función principal es ser una barrera de protección limítrofe extra-celular y el
@@ -136,7 +136,7 @@
           encuentra fuera del núcleo pero adentro de la membrana nuclear
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="nucleo">
         <p>
           <b>3. Núcleo:</b>
           Pueden ser redonda o alargada, oxilan entre 5 a 10mn, contiene el material genético, el cual está constituido por cromosomas, los cuales se
@@ -155,7 +155,7 @@
           proteínica, distribuyéndose por el citoplasma. Se reconoce como un pequeño punto oscuro dentro del núcleo.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="citoesqueleto">
         <p>
           <b>5. Citoesqueleto:</b>
           Es una red o estructura de la célula, formado por filamentos de proteinas clasificados por: micro-filamentos (se encuentran en mayor
@@ -168,14 +168,14 @@
           interconectan entre la membrana plasmática y núcleo.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="golgi">
         <p>
           <b>6. Complejo de Golgi</b>
           Se caracteriza por una estructura membranosa en forma de láminas y de vesículas cerca del núcleo, su función es ayudar a la síntesis y
           maduración de proteinas, para ser empleados por la célula o para su exportación. Trabaja muy en conjunto con el retículo endoplasmático.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="endoplasmatico">
         <p>
           <b>7. Retículo endoplasmático</b>
           Es un complejo membranoso, el cual se caracteriza por dos estructuras:
@@ -192,14 +192,14 @@
           </p>
         </section>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="centriolo">
         <p>
           <b>8. Centríolos</b>
           Se caracteriza por ser estructuras cilíndricas, formados por microtúbulos, localizadas cerca del núcleo y constituidas por proteinas llamada
           tubulina, participa en la división celular.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="mitocondrias">
         <p>
           <b>9. Mitocondrias</b>
           Se caracteriza por su estructura globular, formada por unidades membranosa, su función es ayudar a proveer energía química a la célula,
@@ -214,16 +214,16 @@
           epitelios y en los flagelos, ayuda a la locomoción, particularmente en espermatozoides.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="peroxisomas">
         <p>
           <b>11. Peroxisomas</b>
           Son pequeñas vesículas de tamaño 0.3 a 1.5 micrómetros de diámetro, los cuales cumplen una función de desintoxicar la célula de productos
           metabólicos como el peróxido de hidrógeno, se localizan en su gran mayoría en a nivel hepático y renal.
         </p>
       </section>
-      <section class="content__section">
+      <section class="content__section" id="lisosomas">
         <p>
-          <b>Lisosomas</b>
+          <b>12. Lisosomas</b>
           “son vesículas membranosas que en su interior contienen una gran variedad de enzimas, como las proteasas, que rompen a las proteínas,
           glucosidasas, que actúan sobre los azúcares, desoxirribonucleicos y ribonucleicos, que degradan a los ácidos nucleicos, y la lisozima, que
           es anti-bacteriana”.(Quintanar Stephano, J. L. (2010) Neurofisiología básica. Aguascalientes, Mexico: Universidad Autónoma de
@@ -232,8 +232,15 @@
         <p>Es llamada así como el sistema digestivo de la célula.</p>
         <p>Ambas cumplen una función en común que es: digerir y eliminar sustancias extrañas.</p>
       </section>
+      <section class="content__section" id="ribosomas">
+        <p>
+          <b>13. Ribosomas</b>
+          Tienen un tamaño aproximado de 30mn de diámetro, los cuales contienen diversas proteínas como el RNA. Unos se encuentran libres en el
+          citoplasma y otros se encuentran en el retículo endoplasmático rugoso. Su función principal es la síntesis de las proteínas.
+        </p>
+      </section>
     </section>
-    <section class="content__section">
+    <section class="content__section" id="procariota">
       <p>
         <b>2. Procariotas:</b>
         El término griego de su nombre es pro (antes de) y carion (almendra o núcleo) denominando así a la carencia del núcleo celular. Es más pequeña
@@ -265,10 +272,14 @@ export default {
 .content {
   @include Flex(column, flex-start, flex-start);
   gap: $spacing * 2;
-  padding: $spacing * 2;
+  padding: $spacing * 2 0;
   line-height: 1.5;
-  p {
-    max-width: 90%;
+  width: 100%;
+  small {
+    align-self: flex-start;
+  }
+  a {
+    word-break: break-word;
   }
   &__section {
     @include Flex(column, flex-start, flex-start);
@@ -277,6 +288,11 @@ export default {
   &__img {
     @include Flex(column);
     margin: auto;
+    max-width: max-content;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__cell {
     align-self: center;
