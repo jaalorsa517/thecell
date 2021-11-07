@@ -39,6 +39,7 @@ export default {
   }
   &__content {
     position: relative;
+    user-select: none;
   }
   &__bar {
     height: $spacing;

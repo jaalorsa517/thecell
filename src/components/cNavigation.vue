@@ -40,8 +40,9 @@ export default {
 
 <style lang="scss">
 .navigation {
+  position: sticky;
+  top: 40px;
   padding: $spacing * 3;
-  margin: auto;
   &__items {
     @include Flex(row, center);
     gap: $spacing * 3;

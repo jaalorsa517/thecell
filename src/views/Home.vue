@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss">
 .home {
-  @include Flex(column);
+  @include Flex(column, flex-start, flex-start);
   &__nav {
     flex-grow: 0;
   }
