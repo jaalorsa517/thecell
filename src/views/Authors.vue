@@ -48,8 +48,8 @@ export default {
     return {
       auths: [
         { name: "Alejandra Medieta Gomez ", id: "1023947448" },
-        { name: "Aurys González ", id: "100104749" },
-        { name: "Liseth Vanessa ", id: "100105436" },
+        { name: "Aurys Estela González Sarmiento ", id: "100104749" },
+        { name: "Liseth Vanessa Sepúlveda Sánchez", id: "100105436" },
         { name: "Lury Yibell Díaz Chica ", id: "100105042" },
       ],
     };

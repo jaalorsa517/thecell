@@ -14,6 +14,13 @@
         <a :href="crefImg.link" target="_blank">{{ crefImg.link }}</a>
       </li>
     </ul>
+    <h5>Vídeos</h5>
+    <ul class="refer__container">
+      <li v-for="(crefVid, id) in crefsVid" :key="id">
+        <span>{{ crefVid.sub }}</span>
+        <a :href="crefVid.link" target="_blank">{{ crefVid.link }}</a>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -63,6 +70,16 @@ export default {
         {
           sub: "Imagen 4: Célula procariota. Imagen tomada de: Raquel Parada Puig ",
           link: "https://www.lifeder.com/celula-procariota/",
+        },
+      ],
+      crefsVid: [
+        {
+          sub: "Vídeo 1: La teoría celular. Tomado de Youtube ",
+          link: "https://www.youtube.com/watch?v=ZqpxTM-GQ5U",
+        },
+        {
+          sub: "Vídeo 2: Biología, la célula. Tomado de Youtube ",
+          link: "https://youtu.be/JLNokMENF6s",
         },
       ],
     };

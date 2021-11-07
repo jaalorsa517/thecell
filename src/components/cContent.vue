@@ -277,6 +277,11 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        <small>
+          <router-link to="/ref">
+            <i>Vídeo 1: La teoría celular.</i>
+          </router-link>
+        </small>
       </section>
       <h6>Biología: la célula</h6>
       <section class="content__section content__section--center">
@@ -289,6 +294,11 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        <small>
+          <router-link to="/ref">
+            <i>Vídeo 2: Biología, la célula.</i>
+          </router-link>
+        </small>
       </section>
     </section>
   </section>
