@@ -4,7 +4,7 @@
     <nav class="header__nav">
       <ul class="header__items">
         <li class="header__item" v-for="(item, key) in items" :key="key">
-          <router-link :to="item.link">{{ item.text }}</router-link>
+          <router-link :class="[isActive(item.active)]" :to="item.link">{{ item.text }}</router-link>
         </li>
       </ul>
     </nav>
@@ -20,13 +20,25 @@ export default {
         {
           text: "Inicio",
           link: "/#app",
+          active: ["/"],
         },
         {
           text: "Referencias",
           link: "/ref",
+          active: ["/ref"],
+        },
+        {
+          text: "Autores",
+          link: "/auths",
+          active: ["/auths"],
         },
       ],
     };
+  },
+  methods: {
+    isActive(active) {
+      return active.includes(this.$route.path) ? "linkActive linkActiveExact" : "";
+    },
   },
 };
 </script>

@@ -12,10 +12,8 @@
       <p>Existen dos tipos de células que hacen la diferencia en los seres vivos, las cuales son:</p>
     </section>
     <section class="content__section" id="eucariota">
-      <p>
-        <b>1. Eucariotas:</b>
-        La célula está compuesta por diferentes estructuras tanto morfológicas como funcional, las cuales son:
-      </p>
+      <h5>Eucariotas:</h5>
+      <p>La célula está compuesta por diferentes estructuras tanto morfológicas como funcional, las cuales son:</p>
       <cell class="content__cell" />
       <section class="content__section" id="membrana">
         <p>
@@ -26,108 +24,113 @@
         <p>
           La capa bilipidica como su nombre lo indica está conformada por lípidos ( fosfolípidos y fosfatidilcolina) y (bi) que son dos extremos
           hidrofílica (soluble en agua) localizado tanto a nivel externa como interna a nivel de la célula e hidrofóbica (no se disuelve en agua),
-          localizada en el interior de la membrana. (Quintanar, 2011, p.16)(
-          <a href="https://elibro.net/es/ereader/biblioibero/40724?page=14">https://elibro.net/es/ereader/biblioibero/40724?page=14</a>
-          )
+          localizada en el interior de la membrana.
+          <router-link to="/ref">
+            <i>(Quintanar Stephano, J. L. (2010),p.16)</i>
+          </router-link>
         </p>
         <p>La proteína de la membrana, se clasifica en diferentes funciones:</p>
-        <p>
-          <b>* Estructurales:</b>
-          Cruzan la membrana de lado a lado (integrales) y extra e intracelular (periféricas) por lo que no atraviesan la célula, su función es actuar
-          como enzimas, antígeno, molécula y adhesión celular.
-        </p>
-        <p>
-          <b>* Transportador:</b>
-          Ayuda al transporte de sustancias, permitiendo el paso de iones, agua y moléculas intra o extra celular. Existen 3 tipos de transporte de
-          sustancias como:
-        </p>
-        <section class="content__section">
+        <section class="content__section" cp="simple">
           <p>
-            <u>1. Difusión simple:</u>
-            Atraviesan la membrana sin ningún tipo de restricción en este caso las sustancias liposolubles
+            <b>1.1 Estructurales:</b>
+            Cruzan la membrana de lado a lado (integrales) y extra e intracelular (periféricas) por lo que no atraviesan la célula, su función es
+            actuar como enzimas, antígeno, molécula y adhesión celular.
           </p>
           <p>
-            <u>2. Proteínas bomba:</u>
-            Se necesita Energía para el transporta iones a través de la membrana.
+            <b>1.2 Transportador:</b>
+            Ayuda al transporte de sustancias, permitiendo el paso de iones, agua y moléculas intra o extra celular. Existen 3 tipos de transporte de
+            sustancias como:
+          </p>
+          <section class="content__section" cp="doble">
+            <p>
+              <b><i>A. Difusión simple:</i></b>
+              Atraviesan la membrana sin ningún tipo de restricción en este caso las sustancias liposolubles
+            </p>
+            <p>
+              <b><i>B. Proteínas bomba:</i></b>
+              Se necesita Energía para el transporta iones a través de la membrana.
+            </p>
+            <p>
+              <b><i>C. Proteínas canal:</i></b>
+              No necesita energía, por ende es un medio de transporte pasivo, el cual al estar activados los canales, permitiendo el paso de iones,
+              dentro o fuera de la célula. La entrada y salida de sustancias, se realiza mediante la endocitosis (introduce sustancias a la célula),
+              exocitosis (expulsa ciertas moléculas extra-celulares).
+            </p>
+          </section>
+          <p>
+            También, existen 2 mecanismos de función celular que permiten el ingreso y el egreso de moléculas o sustancias que se encuentra en la
+            célula
+          </p>
+          <section class="content__section" cp="simple">
+            <section class="content__section" cp="doble">
+              <p>
+                <b>1.2.1 Endocitosis</b>
+                Permite el ingreso de moléculas mediante el mecanismo de:
+              </p>
+              <section class="content__section" cp="triple">
+                <p>
+                  <b><i>A. Pinocitosis:</i></b>
+                  Introduce sustancias liquidas o pequeñas moléculas a la célula.
+                </p>
+                <p>
+                  <b><i>B. Fagocitosis:</i></b>
+                  Captura moléculas sólidas y de gran tamaño.
+                </p>
+                <p>
+                  <b><i>C. Mediada por receptor:</i></b>
+                  Une moléculas especificas y luego las lleva al interior de la célula.
+                </p>
+              </section>
+              <section class="content__img">
+                <img :src="require('@/assets/endocitosis.png')" alt="endocitosis" />
+                <small>
+                  <router-link to="/ref">
+                    <i>Imagen 2:Mecanismo de endocitosis</i>
+                  </router-link>
+                </small>
+              </section>
+            </section>
+          </section>
+          <section class="content__section" cp="doble">
+            <p>
+              <b>1.2.2 Exocitosis</b>
+              Ayuda a exportar ciertas sustancias o moléculas extra-celular, por medio de mecanismos
+            </p>
+            <section class="content__section" cp="triple">
+              <p>
+                <b><i>A. Continuo:</i></b>
+                Como su nombre lo indica, es constante su secreción o expulsión.
+              </p>
+              <p>
+                <b><i>B. Regulada:</i></b>
+                Las moléculas o sustancias, son almacenadas por un tiempo hasta que cumplen un tiempo determinado para ser expulsadas cuando halla una
+                señal fisiológica.
+              </p>
+              <p>
+                <b><i>C. Vía endosómica:</i></b>
+                Se expulsa entre los mismos organelos.
+              </p>
+            </section>
+            <section class="content__img">
+              <img :src="require('@/assets/exocitosis.jpg')" alt="exocitosis" />
+              <small>
+                <router-link to="/ref">
+                  <i>Imagen 3.Proceso de exocitosis</i>
+                </router-link>
+              </small>
+            </section>
+          </section>
+          <p>
+            <b>1.3 Enzimas:</b>
+            Activan ciertas reacciones químicas sobre la superficie de la membrana. Gran variedad de sus funciones depende del sitio en donde se
+            encuentre.
           </p>
           <p>
-            <u>3. Proteínas canal:</u>
-            No necesita energía, por ende es un medio de transporte pasivo, el cual al estar activados los canales, permitiendo el paso de iones,
-            dentro o fuera de la célula. La entrada y salida de sustancias, se realiza mediante la endocitosis (introduce sustancias a la célula),
-            exocitosis (expulsa ciertas moléculas extra-celulares).
+            <b>1.4 Receptores:</b>
+            Reconoce e interactua con sustancias extracelulares, como lo son: Neurotrasmisores, hormonas, entre otros, generando una respuesta interna
+            a la célula.
           </p>
         </section>
-        <section class="content__section">
-          <p>
-            <b>* Endocitosis</b>
-            Permite el ingreso de moléculas mediante el mecanismo de:
-          </p>
-          <section class="content__section">
-            <p>
-              <u>A) Pinocitosis:</u>
-              Introduce sustancias liquidas o pequeñas moléculas a la célula.
-            </p>
-            <p>
-              <u>B) Fagocitosis:</u>
-              Captura moléculas sólidas y de gran tamaño.
-            </p>
-            <p>
-              <u>C) Mediada por receptor:</u>
-              Une moléculas especificas y luego las lleva al interior de la célula.
-            </p>
-          </section>
-          <section class="content__img">
-            <img :src="require('@/assets/endocitosis.png')" alt="endocitosis" />
-            <small>Figura 1.Mecanismo de endocitosis</small>
-            <small>
-              Imagen tomada de:
-              <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tipos_de_endocitosis.svg/412px-Tipos_de_endocitosis.svg.png">
-                https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tipos_de_endocitosis.svg/412px-Tipos_de_endocitosis.svg.png
-              </a>
-            </small>
-          </section>
-        </section>
-        <section class="content__section">
-          <p>
-            <b>* Exocitosis</b>
-            Ayuda a exportar ciertas sustancias o moléculas extra-celular, por medio de mecanismos
-          </p>
-          <section class="content__section">
-            <p>
-              <u>A) Continuo:</u>
-              Como su nombre lo indica, es constante su secreción o expulsión.
-            </p>
-            <p>
-              <u>B) Regulada:</u>
-              Las moléculas o sustancias, son almacenadas por un tiempo hasta que cumplen un tiempo determinado para ser expulsadas cuando halla una
-              señal fisiológica.
-            </p>
-            <p>
-              <u>C) Vía endosómica:</u>
-              Se expulsa entre los mismos organelos.
-            </p>
-          </section>
-          <section class="content__img">
-            <img :src="require('@/assets/exocitosis.jpg')" alt="exocitosis" />
-            <small>Figura 2.Proceso de exocitosis</small>
-            <small>
-              Imagen tomada de:
-              <a href="https://3.bp.blogspot.com/-vuT1qZX3I7w/VHTOTCDb4-I/AAAAAAAAAJg/PU3y956hvtw/s1600/Imagen5.jpg">
-                https://3.bp.blogspot.com/-vuT1qZX3I7w/VHTOTCDb4-I/AAAAAAAAAJg/PU3y956hvtw/s1600/Imagen5.jpg
-              </a>
-            </small>
-          </section>
-        </section>
-        <p>
-          <b>* Enzimas:</b>
-          Activan ciertas reacciones químicas sobre la superficie de la membrana. Gran variedad de sus funciones depende del sitio en donde se
-          encuentre.
-        </p>
-        <p>
-          <b>* Receptores:</b>
-          Reconoce e interactua con sustancias extracelulares, como lo son: Neurotrasmisores, hormonas, entre otros, generando una respuesta interna a
-          la célula.
-        </p>
       </section>
       <section class="content__section">
         <p>
@@ -142,7 +145,9 @@
           Pueden ser redonda o alargada, oxilan entre 5 a 10mn, contiene el material genético, el cual está constituido por cromosomas, los cuales se
           forman por génes y ácido desoxirribonucleico (ADN), en este radica la información hereditaria y ayudando a gobernar las acciones de la
           célula a través de su emisario ácido ribonucleico (RNA).
-          <a href="https://elibro.net/es/ereader/biblioibero/40724?page=14">https://elibro.net/es/ereader/biblioibero/40724?page=14</a>
+          <router-link to="/ref">
+            <i>(Quintanar Stephano, J. L. (2010),p.18)</i>
+          </router-link>
         </p>
         <p>
           El núcleo, se encuentra rodeado por una membrana llamada envoltura nuclear, la que protege el ADN y separa el núcleo del resto de la célula.
@@ -182,11 +187,11 @@
         </p>
         <section class="content__section">
           <p>
-            <u>* Granular o Rugoso:</u>
+            <b><i>7.1 Granular o Rugoso:</i></b>
             Se nombra por su estructura tubular, formado por ribosomas, adoptando una forma rugosa, su función es sintetizar las proteinas.
           </p>
           <p>
-            <u>*A granular o Liso:</u>
+            <b><i>7.2 A granular o Liso:</i></b>
             Se nombra por su estructura tubular, carece de ribosomas por lo que su forma es lisa, su función es la síntesis de esteroides y
             desintoxicación celular.
           </p>
@@ -226,8 +231,10 @@
           <b>12. Lisosomas</b>
           “son vesículas membranosas que en su interior contienen una gran variedad de enzimas, como las proteasas, que rompen a las proteínas,
           glucosidasas, que actúan sobre los azúcares, desoxirribonucleicos y ribonucleicos, que degradan a los ácidos nucleicos, y la lisozima, que
-          es anti-bacteriana”.(Quintanar Stephano, J. L. (2010) Neurofisiología básica. Aguascalientes, Mexico: Universidad Autónoma de
-          Aguascalientes. Recuperado de https://elibro.net/es/ereader/biblioibero/40724?page=19. )
+          es anti-bacteriana”.
+          <router-link to="/ref">
+            <i>(Quintanar Stephano, J. L. (2010),p.18)</i>
+          </router-link>
         </p>
         <p>Es llamada así como el sistema digestivo de la célula.</p>
         <p>Ambas cumplen una función en común que es: digerir y eliminar sustancias extrañas.</p>
@@ -241,8 +248,8 @@
       </section>
     </section>
     <section class="content__section" id="procariota">
+      <h5>Procariotas:</h5>
       <p>
-        <b>2. Procariotas:</b>
         El término griego de su nombre es pro (antes de) y carion (almendra o núcleo) denominando así a la carencia del núcleo celular. Es más pequeña
         que la eucariota y además, es más sencilla en su estructura. Su tamaño promedio es de 1 a 10 micrómetros. Contienen un citoplasma con una gran
         cantidad de ribosomas, una sola cadena de ADN (material genético) y una membrana plasmática circundante. (Galindo, Avendaño, & Angulo, 2012,
@@ -251,10 +258,37 @@
       <section class="content__img">
         <img :src="require('@/assets/celula_procariota.jpg')" alt="célula procariota" />
         <small>
-          Imagen tomada de: Raquel Parada Puig,
-          <a href="https://www.lifeder.com/celula-procariota/">https://www.lifeder.com/celula-procariota/</a>
-          , 04 de noviembre 2021
+          <router-link to="/ref">
+            <i>Imagen 4: Célula procariota.</i>
+          </router-link>
         </small>
+      </section>
+    </section>
+    <section class="content__section" id="videoInfo" width="all">
+      <h5>Vídeos complementarios</h5>
+      <h6>La teoría celular</h6>
+      <section class="content__section content__section--center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ZqpxTM-GQ5U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <h6>Biología: la célula</h6>
+      <section class="content__section content__section--center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/JLNokMENF6s"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </section>
     </section>
   </section>
@@ -284,6 +318,14 @@ export default {
   &__section {
     @include Flex(column, flex-start, flex-start);
     gap: $spacing * 1.5;
+    &--center {
+      align-items: center;
+      margin: auto;
+      width: max-content;
+      iframe {
+        width: 100%;
+      }
+    }
   }
   &__img {
     @include Flex(column);
@@ -296,6 +338,16 @@ export default {
   }
   &__cell {
     align-self: center;
+  }
+  @media screen and (min-width: 768px) {
+    &__section {
+      &--center {
+        width: 100%;
+        iframe {
+          max-width: 700px;
+        }
+      }
+    }
   }
 }
 </style>

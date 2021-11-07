@@ -30,7 +30,7 @@ export default {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow;
   background-color: white;
   z-index: 100;
   animation: show-in 800ms;

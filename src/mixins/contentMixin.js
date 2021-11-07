@@ -20,13 +20,21 @@ export default {
             "/#centriolo",
             "/#citoesqueleto",
             "/#ribosomas",
+            "/#procariota",
+            "/#videoInfo",
           ],
         },
         {
           title: "",
           content: "",
           to: "#procariota",
-          match: ["/#procariota"],
+          match: ["/#procariota", "/#videoInfo"],
+        },
+        {
+          title: "",
+          content: "",
+          to: "#videoInfo",
+          match: ["/#videoInfo"],
         },
       ],
     };

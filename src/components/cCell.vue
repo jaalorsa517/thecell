@@ -5,6 +5,11 @@
         <area v-for="(area, id) in areas" :key="id" shape="circle" :coords="area.coords.join(',')" :info="area.name" :alt="area.title" />
       </map>
       <img usemap="#cell" :src="require('@/assets/cell.jpg')" alt="cell" @click="onClickImage" />
+      <small class="cell__ref">
+        <router-link to="/ref">
+          <i>Imagen 1: Célula eucariota</i>
+        </router-link>
+      </small>
       <div v-for="(area, id) in areas" :key="id">
         <i
           :class="['cell__pointer', area.name]"
@@ -158,6 +163,7 @@ export default {
 .cell {
   @include Flex(column, center, flex-start);
   position: relative;
+  margin: $spacing 0;
   &__img {
     background-size: cover;
     max-width: max-content;
@@ -165,6 +171,10 @@ export default {
       width: 100%;
       height: 100%;
     }
+  }
+  &__ref {
+    position: relative;
+    top: -$spacing;
   }
   &__pointer {
     @include Flex(column);

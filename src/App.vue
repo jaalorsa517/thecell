@@ -2,6 +2,12 @@
   <div id="app">
     <c-header />
     <router-view />
+    <footer class="footer">
+      <small>
+        by
+        <a href="https://jaalorsa.com" target="__blank">@jaalorsa</a>
+      </small>
+    </footer>
   </div>
 </template>
 
@@ -16,4 +22,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin: auto;
+}
+</style>

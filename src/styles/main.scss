@@ -11,6 +11,22 @@
   box-sizing: border-box;
 }
 
+*[cp="simple"] {
+  margin-left: $spacing;
+}
+*[cp="doble"] {
+  margin-left: $spacing * 2;
+}
+*[cp="triple"] {
+  margin-left: $spacing * 3;
+}
+*[width="all"] {
+  width: 100%;
+}
+*[fwn] {
+  font-weight: normal;
+}
+
 a {
   cursor: pointer;
 }
@@ -38,4 +54,8 @@ h5 {
 }
 h6 {
   font-size: 1.2rem;
+}
+
+.linkActive.linkActiveExact {
+  color: $secondary_color;
 }

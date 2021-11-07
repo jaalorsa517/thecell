@@ -17,6 +17,7 @@ const routes = [
           nav,
           content: () => import("@/components/cContent.vue"),
         },
+        props: true,
       },
     ],
   },
@@ -25,6 +26,11 @@ const routes = [
     name: "Referencias",
     component: () => import("@/views/Refer.vue"),
   },
+  {
+    path: "/auths",
+    name: "Autores",
+    component: () => import("@/views/Authors.vue"),
+  },
 ];
 
 const router = new VueRouter({
@@ -32,7 +38,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to, from, savedPosition) {
-    console.log(to.hash);
     if (to.hash) {
       if (window.innerWidth < 768) {
         return {
