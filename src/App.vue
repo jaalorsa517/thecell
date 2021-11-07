@@ -2,12 +2,12 @@
   <div id="app">
     <c-header />
     <router-view />
-    <footer class="footer">
+    <!-- <footer class="footer">
       <small>
         by
         <a href="https://jaalorsa.com" target="__blank">@jaalorsa</a>
       </small>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
