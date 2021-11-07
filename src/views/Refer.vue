@@ -83,6 +83,7 @@ export default {
     border-radius: $spacing;
     box-shadow: $shadow;
     word-wrap: anywhere;
+    border-top: 10px solid $secondary_color;
   }
 }
 </style>
