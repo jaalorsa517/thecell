@@ -1,9 +1,6 @@
 <template>
   <section class="cell">
     <div class="cell__img">
-      <map name="cell" v-if="!isMobile">
-        <area v-for="(area, id) in areas" :key="id" shape="circle" :coords="area.coords.join(',')" :info="area.name" :alt="area.title" />
-      </map>
       <img usemap="#cell" :src="require('@/assets/cell.jpg')" alt="cell" @click="onClickImage" />
       <small class="cell__ref">
         <router-link to="/ref">
@@ -46,7 +43,7 @@ export default {
           coords: [256, 50, 30],
           title: "Membrana",
           text: "Está formada por una capa bilipidica y proteinas, su función principal es ser una barrera de protección...",
-          link: "#membrana",
+          link: "?id=0#membrana",
           showModal: false,
         },
         {
@@ -54,7 +51,7 @@ export default {
           coords: [470, 210, 30],
           title: "Complejo de Golgi",
           text: "Se caracteriza por una estructura membranosa en forma de láminas y de vesículas cerca del núcleo...",
-          link: "#golgi",
+          link: "?id=0#golgi",
           showModal: false,
         },
         {
@@ -62,7 +59,7 @@ export default {
           coords: [230, 150, 30],
           title: "Endoplasmático",
           text: "Es un complejo membranoso, el cual se caracteriza por dos estructuras...",
-          link: "#endoplasmatico",
+          link: "?id=0#endoplasmatico",
           showModal: false,
         },
         {
@@ -70,7 +67,7 @@ export default {
           coords: [246, 380, 30],
           title: "Mitocondria",
           text: "Se caracteriza por su estructura globular, formada por unidades membranosa, su función es ayudar a...",
-          link: "#mitocondrias",
+          link: "?id=0#mitocondrias",
           showModal: false,
         },
         {
@@ -78,7 +75,7 @@ export default {
           coords: [281, 440, 10],
           title: "Peroxisoma",
           text: "Son pequeñas vesículas de tamaño 0.3 a 1.5 micrómetros de diámetro, los cuales cumplen una función...",
-          link: "#peroxisomas",
+          link: "?id=0#peroxisomas",
           showModal: false,
         },
         {
@@ -86,7 +83,7 @@ export default {
           coords: [350, 456, 10],
           title: "lisosomas",
           text: "son vesículas membranosas que en su interior contienen una gran variedad de enzimas, como...",
-          link: "#lisosomas",
+          link: "?id=0#lisosomas",
           showModal: false,
         },
         {
@@ -94,7 +91,7 @@ export default {
           coords: [333, 274, 40],
           title: "Núcleo",
           text: "Pueden ser redonda o alargada, oxilan entre 5 a 10mn, contiene el material genético, el cual está...",
-          link: "#nucleo",
+          link: "?id=0#nucleo",
           showModal: false,
         },
         {
@@ -102,7 +99,7 @@ export default {
           coords: [188, 310, 30],
           title: "Centríolo",
           text: "Se caracteriza por ser estructuras cilíndricas, formados por microtúbulos, localizadas cerca...",
-          link: "#centriolo",
+          link: "?id=0#centriolo",
           showModal: false,
         },
         {
@@ -110,7 +107,7 @@ export default {
           coords: [173, 451, 30],
           title: "Citoesqueleto",
           text: "Es una red o estructura de la célula, formado por filamentos de proteinas clasificados por:...",
-          link: "#citoesqueleto",
+          link: "?id=0#citoesqueleto",
           showModal: false,
         },
         {
@@ -118,7 +115,7 @@ export default {
           coords: [532, 342, 10],
           title: "Ribosoma",
           text: "Tienen un tamaño aproximado de 30mn de diámetro, los cuales contienen diversas proteínas como el...",
-          link: "#ribosomas",
+          link: "?id=0#ribosomas",
           showModal: false,
         },
       ],

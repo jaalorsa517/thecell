@@ -23,17 +23,24 @@ export default {
     };
   },
   methods: {
-    onClick() {
-      if (this.n < this.contents.length - 1) {
-        this.state[this.n].bar = true;
-        this.n++;
-        this.state[this.n].active = true;
-      }
-    },
     getState(index) {
-      if (index > 0 && this.state[index - 1].active) {
+      this.n = +this.$route.query.id || 0;
+      if (this.n == index && index !== 0) {
         this.state[index].active = this.contents[index].match.includes(this.$route.fullPath);
         this.state[index - 1].bar = this.contents[index].match.includes(this.$route.fullPath);
+      }
+      if (this.state.length - 1 > this.n && this.state[this.n + 1].active && this.state[this.n].active) {
+        this.state[this.n].bar = false;
+        this.state.slice(this.n + 1).forEach((item) => {
+          item.active = false;
+          item.bar = false;
+        });
+      }
+      if (0 < this.n && !this.state[this.n - 1].active && this.state[this.n].active) {
+        this.state.slice(0, this.n).forEach((item) => {
+          item.active = true;
+          item.bar = true;
+        });
       }
       return this.state[index];
     },

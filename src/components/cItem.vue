@@ -1,5 +1,5 @@
 <template>
-  <router-link :class="['item', showActive.active ? 'active' : '']" :to="{ path: item.to, query: {} }">
+  <router-link :class="['item', showActive.active ? 'active' : '']" :to="{ path: item.to, query: { id: id - 1 } }">
     <div class="item__content">
       {{ id }}
       <div class="item__bar" v-if="showActive.bar"></div>

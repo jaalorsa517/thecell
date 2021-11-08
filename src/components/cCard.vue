@@ -2,7 +2,7 @@
   <div class="card">
     <h5 class="card__title">{{ data.title }}</h5>
     <p class="card__text">{{ data.text }}</p>
-    <a class="card__link" :href="data.link">Saber más</a>
+    <router-link class="card__link" :to="data.link">Saber más</router-link>
   </div>
 </template>
 
