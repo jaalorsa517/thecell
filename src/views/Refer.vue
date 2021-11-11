@@ -34,6 +34,10 @@ export default {
           link: "https://elibro.net/es/ereader/biblioibero/70442?page=74",
         },
         {
+          sub: "Galindo, A., Avendaño, R., & Angulo, A. (2012). Biología básica. Dirección General de Escuelas Preparatorias de la Universidad Autónoma de Sinaloa. p.80 ",
+          link: "https://www.guao.org/sites/default/files/biblioteca/Biologia%20Basica.pdf",
+        },
+        {
           sub: "Quintanar Stephano, J. L. (2010). Neurofisiología básica. Aguascalientes, Mexico: Universidad Autónoma de Aguascalientes. Recuperado de ",
           link: "https://elibro.net/es/ereader/biblioibero/40724?page=19",
         },
