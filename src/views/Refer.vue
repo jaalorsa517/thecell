@@ -30,28 +30,12 @@ export default {
     return {
       crefs: [
         {
-          sub: "Quintanar Stephano, J. L. (2010). Neurofisiología básica. Aguascalientes, Mexico: Universidad Autónoma de Aguascalientes. Recuperado de ",
-          link: "https://elibro.net/es/ereader/biblioibero/40724?page=19",
-        },
-        {
-          sub: "Concepto. (2021). Concepto. Obtenido de ",
-          link: "https://concepto.de/celula-2/",
-        },
-        {
-          sub: "Enciclopedia de ejemplos. (2019). Enciclopedia de ejemplos. Obtenido de ",
-          link: "https://www.ejemplos.co/30-ejemplos-de-organelos-celulares-y-sus-funciones/",
-        },
-        {
-          sub: "Galindo, A., Avendaño, R., & Angulo, A. (2012). Biología básica. Dirección General de Escuelas Preparatorias de la Universidad Autónoma de Sinaloa. ",
-          link: "",
-        },
-        {
           sub: "Cárdenas Romero, R. y Ojea, N. (2014). Biología celular y humana. Bogotá, Colombia: Ecoe Ediciones. Recuperado de ",
           link: "https://elibro.net/es/ereader/biblioibero/70442?page=74",
         },
         {
-          sub: "",
-          link: "https://medlineplus.gov/spanish/genetica/entender/basica/celula/",
+          sub: "Quintanar Stephano, J. L. (2010). Neurofisiología básica. Aguascalientes, Mexico: Universidad Autónoma de Aguascalientes. Recuperado de ",
+          link: "https://elibro.net/es/ereader/biblioibero/40724?page=19",
         },
       ],
       crefsImg: [
@@ -74,11 +58,11 @@ export default {
       ],
       crefsVid: [
         {
-          sub: "Vídeo 1: La teoría celular. Tomado de Youtube ",
+          sub: "Pérez, David (2015 diciembre 30). La teoría celular (vídeo). Youtube ",
           link: "https://www.youtube.com/watch?v=ZqpxTM-GQ5U",
         },
         {
-          sub: "Vídeo 2: Biología, la célula. Tomado de Youtube ",
+          sub: "Portal Educar (2016 marzo 23). Biología la célula (vídeo). Youtube ",
           link: "https://youtu.be/JLNokMENF6s",
         },
       ],

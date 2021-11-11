@@ -80,6 +80,9 @@
                   <b><i>C. Mediada por receptor:</i></b>
                   Une moléculas especificas y luego las lleva al interior de la célula.
                 </p>
+                <router-link to="/ref">
+                  <i>(Cárdenas Romero, R. y Ojea, N. (2014),p.73)</i>
+                </router-link>
               </section>
               <section class="content__img">
                 <img :src="require('@/assets/endocitosis.png')" alt="endocitosis" />
@@ -110,6 +113,9 @@
                 <b><i>C. Vía endosómica:</i></b>
                 Se expulsa entre los mismos organelos.
               </p>
+              <router-link to="/ref">
+                <i>(Cárdenas Romero, R. y Ojea, N. (2014),p.73)</i>
+              </router-link>
             </section>
             <section class="content__img">
               <img :src="require('@/assets/exocitosis.jpg')" alt="exocitosis" />
